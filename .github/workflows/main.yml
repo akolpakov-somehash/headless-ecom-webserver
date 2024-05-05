@@ -33,3 +33,4 @@ jobs:
           FILTER_REGEX_INCLUDE: .*src/.*
           FILTER_REGEX_EXCLUDE: .*generated/.*
           JSCPD_CONFIG_FILE: .jscpd.json
+          TYPESCRIPT_STANDARD_TSCONFIG_FILE: tsconfig.json
