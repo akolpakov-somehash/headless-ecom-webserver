@@ -1,5 +1,5 @@
 // package: product
-// file: product.proto
+// file: proto/catalog/product.proto
 
 /* tslint:disable */
 /* eslint-disable */

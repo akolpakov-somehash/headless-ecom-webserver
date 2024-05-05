@@ -1,6 +1,6 @@
 import { ProductInfoClient } from '../generated/product_grpc_pb';
-import { QuoteServiceClient } from '../generated/quote_grpc_pb';
-import { OrderServiceClient } from '../generated/order_grpc_pb';
+import { QuoteServiceClient } from '../generated/sale/quote_grpc_pb';
+import { OrderServiceClient } from '../generated/sale/order_grpc_pb';
 import { credentials } from '@grpc/grpc-js';
 
 import env from './config';

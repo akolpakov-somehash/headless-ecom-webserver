@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { productStub, quoteStub, orderStub } from './grpcClients';
-import { Quote, ProductRequest, CustomerId } from '../generated/quote_pb';
-import { OrderId, CustomerId as OrderCustomerId } from '../generated/order_pb';
+import { Quote, ProductRequest, CustomerId } from '../generated/sale/quote_pb';
+import { OrderId} from '../generated/sale/order_pb';
 import { Empty, Product, ProductId, ProductList } from '../generated/product_pb';
 import env from './config';
 
@@ -85,7 +85,7 @@ router.get('/quote/', (req: Request, res: Response) => {
 
 // Route to place an order
 router.post('/place', (req: Request, res: Response) => {
-    const customerId = new OrderCustomerId();
+    const customerId = new CustomerId();
     customerId.setId(req.body.customerId);
 
     const call = orderStub.placeOrder(customerId);
