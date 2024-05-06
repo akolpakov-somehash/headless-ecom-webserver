@@ -1,47 +1,11 @@
-// package: order
-// file: order.proto
+// package: sale
+// file: sale/order.proto
 
 /* tslint:disable */
 /* eslint-disable */
 
 import * as jspb from "google-protobuf";
-
-export class Empty extends jspb.Message { 
-
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): Empty.AsObject;
-    static toObject(includeInstance: boolean, msg: Empty): Empty.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Empty, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): Empty;
-    static deserializeBinaryFromReader(message: Empty, reader: jspb.BinaryReader): Empty;
-}
-
-export namespace Empty {
-    export type AsObject = {
-    }
-}
-
-export class CustomerId extends jspb.Message { 
-    getId(): number;
-    setId(value: number): CustomerId;
-
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): CustomerId.AsObject;
-    static toObject(includeInstance: boolean, msg: CustomerId): CustomerId.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: CustomerId, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): CustomerId;
-    static deserializeBinaryFromReader(message: CustomerId, reader: jspb.BinaryReader): CustomerId;
-}
-
-export namespace CustomerId {
-    export type AsObject = {
-        id: number,
-    }
-}
+import * as sale_quote_pb from "../sale/quote_pb";
 
 export class OrderId extends jspb.Message { 
     getId(): number;

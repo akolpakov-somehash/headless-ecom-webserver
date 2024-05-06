@@ -1,5 +1,5 @@
-// package: quote
-// file: quote.proto
+// package: sale
+// file: sale/quote.proto
 
 /* tslint:disable */
 /* eslint-disable */
