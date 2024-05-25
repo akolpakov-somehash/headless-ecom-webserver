@@ -32,3 +32,4 @@ jobs:
           FILTER_REGEX_INCLUDE: .*src/.*
           TYPESCRIPT_STANDARD_TSCONFIG_FILE: tsconfig.json
           #JAVASCRIPT_ES_CONFIG_FILE: eslint.config.mjs
+          ESLINT_USE_FLAT_CONFIG: false
