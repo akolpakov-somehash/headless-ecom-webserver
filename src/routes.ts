@@ -24,12 +24,12 @@ router.get('/products', (req: Request, res: Response) => {
 })
 
 router.get('/products/:id', (req: Request, res: Response) => {
-  if (!req.params.id) {
+  if (req.params.id.length === 0) {
     res.status(400).send('Product ID not set.')
     return
   }
   const productId = new ProductId()
-  productId.setId(Number(req.params.id)) // Convert the string to a number before setting it as the ID
+  productId.setId(Number(req.params.id))
 
   productStub.getProductInfo(productId, (err, product: Product) => {
     if (err != null) {
@@ -124,9 +124,8 @@ router.get('/customer/:customerId/orders', (req: Request, res: Response) => {
       console.error(err)
       return res.status(500).send('Error retrieving orders')
     }
-    // Adjust according to actual available methods
     const orderList = orders.toObject()
-    if (orderList && orderList.ordersList) { // Checking if ordersList is the correct property name
+    if (orderList?.ordersList != null) {
       res.json(orderList.ordersList)
     } else {
       res.status(500).send('Failed to parse orders')
