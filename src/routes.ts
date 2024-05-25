@@ -14,7 +14,7 @@ router.get('/products', (req: Request, res: Response) => {
       return res.status(500).send('Error retrieving product list')
     }
     try {
-      const productsArray = products.toObject().productsMap.map(([i, product]: [number, Product.AsObject]) => product)
+      const productsArray = products.toObject().productsMap.map(([, product]: [number, Product.AsObject]) => product)
       res.json(productsArray)
     } catch (error) {
       console.error('Error sending products:', error)
@@ -25,7 +25,7 @@ router.get('/products', (req: Request, res: Response) => {
 
 router.get('/products/:id', (req: Request, res: Response) => {
   const productIdParam = req.params.id
-  if (!req.params.id) {
+  if (!productIdParam) {
     res.status(400).send('Product ID not set.')
     return
   }
