@@ -14,7 +14,7 @@
     "typescript-eslint": "^8.0.0-alpha.25"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.10.8",
+    "@grpc/grpc-js": "^1.10.9",
     "@grpc/proto-loader": "^0.7.13",
     "@types/jsonwebtoken": "^9.0.6",
     "cors": "^2.8.5",
